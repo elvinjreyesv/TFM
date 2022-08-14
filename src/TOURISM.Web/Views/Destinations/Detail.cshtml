@@ -1,0 +1,68 @@
+﻿@model List<OntologyDTO>
+
+@{
+    ViewData["Title"] = Lang("_Tourism");
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var destinationImage = "destination";
+    var destinationName = string.Empty;
+    if (Context.Request.Query.ContainsKey("destination"))
+    {
+        destinationName = (Context.Request.Query["destination"]).ToString();
+        destinationImage = destinationName.ToLower();
+    }
+
+    var toHeader = new TopHeaderDTO()
+    {
+        AdditionalText = Lang("_Discover"),
+        Image = $"images/Home/Top/{destinationImage}.jpg",
+        BreadCrumb = new List<BreadCrumbDTO>()
+        {
+            new BreadCrumbDTO()
+            {
+                Action = Url.Action("Index", "Home"),
+                Text = Lang("_Home"),
+                Order = 1
+            },
+            new BreadCrumbDTO()
+            {
+                Action = Url.Action("Index", "Destinations"),
+                Text = Lang("_Destinations"),
+                Order = 2
+            },
+            new BreadCrumbDTO()
+            {
+                Action = string.Empty,
+                Text = @Lang(string.Concat("_", destinationName)),
+                Order = 3
+            }
+        }
+    };
+}
+
+@await Html.PartialAsync("~/Views/Shared/Partials/_TopHeader.cshtml", toHeader);
+
+@if (Model != null)
+{
+    <div class="section">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-12">
+                    <h2 class="heading text-primary" property="v:destination">@Lang(string.Concat("_", destinationName))</h2>
+                    @foreach (var sub in Model)
+                    {
+                        @if (sub.Children != null && sub.Children.Any())
+                        {
+                            @await Html.PartialAsync("~/Views/Partials/_Children.cshtml", sub.Children)
+                        }
+
+                        @if (sub.Individuals != null && sub.Individuals.Any())
+                        {
+                            @await Html.PartialAsync("~/Views/Partials/_Individuals.cshtml", sub.Individuals)
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}

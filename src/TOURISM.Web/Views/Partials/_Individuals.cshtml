@@ -1,0 +1,23 @@
+﻿@model List<IndividualPropertiesDTO>
+
+@{
+    var controller = this.ViewContext.RouteData.Values["controller"].ToString();
+    var title = Lang(string.Concat("_", controller, "_1")) ?? Lang("_Individual");
+}
+
+@foreach (var ind in Model)
+{
+    <div class="d-block agent-box mt-3">
+        @if (controller != "Accommodation")
+        {
+            <div class="text">
+                <h3>@title: <span style="font-size:0.8rem; color:#000; ">@ind.IndividualName.ReplaceOntology()</span></h3>
+            </div>
+        }
+
+        @if (ind.Properties != null && ind.Properties.Any())
+        {
+            @await Html.PartialAsync("~/Views/Partials/_Properties.cshtml", ind.Properties)
+        }
+    </div>
+}

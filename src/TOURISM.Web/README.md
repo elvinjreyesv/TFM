@@ -1,0 +1,5 @@
+This project makes an implementation of an ontology on the Web based on the tourism domain. The main idea is to take an existing ontology, and use it as a database to extract knowledge and be able to visualize it through the screens.
+
+The ontology is associated with the semantic web, which promotes a large knowledge network, where everything is connected, and through which there is a knowledge on the web understandable by machines and humans.
+
+In this implementation we have some destinations that associate all the knowledge that the ontology has. Once inside a destination we can see the list of associated lodgings, together with the applied axiom. If we click on a particular accommodation, we have all the properties and data associated to it through the different relationships established, and the axioms created.

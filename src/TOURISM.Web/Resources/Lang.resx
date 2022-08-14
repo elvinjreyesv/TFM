@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_RightsReserved" xml:space="preserve">
+    <value>All rights reserved</value>
+  </data> 
+    <data name="_SearchPlaceholder" xml:space="preserve">
+    <value>Destination, accomodation, room</value>
+  </data>
+    <data name="_Discover" xml:space="preserve">
+    <value>Discover</value>
+  </data>
+    <data name="_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="_Destinations" xml:space="preserve">
+    <value>Destinations</value>
+  </data>
+  <data name="_Destination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="_Destinations_1" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="_ViewAllDestinations" xml:space="preserve">
+    <value>View all Destinations</value>
+  </data> 
+    <data name="_SeeDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="_Prev" xml:space="preserve">
+    <value>Prev</value>
+  </data>
+    <data name="_Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="_CopyRight" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="_Tourism" xml:space="preserve">
+    <value>Tourism</value>
+  </data>
+    <data name="_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+    <data name="_Ontology" xml:space="preserve">
+    <value>Ontology</value>
+  </data>
+  <data name="_Paper" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="_English" xml:space="preserve">
+   <value>English</value>
+ </data>
+  <data name="_Spanish" xml:space="preserve">
+  <value>Spanish</value>
+</data>
+<data name="_Beach" xml:space="preserve">
+ <value>Beach</value>
+</data>
+  <data name="_CulturalAreas" xml:space="preserve">
+ <value>Cultural Areas</value>
+</data>
+  <data name="_NaturalAreas" xml:space="preserve">
+ <value>Natural Areas</value>
+</data>
+  <data name="_TownAndCities" xml:space="preserve">
+ <value>Town And Cities</value>
+</data>
+  <data name="_WinterSportAreas" xml:space="preserve">
+ <value>Winter Sport Areas</value>
+</data>
+<data name="_ChildrenClasses" xml:space="preserve">
+ <value>Children Classes</value>
+</data>
+<data name="_Property" xml:space="preserve">
+ <value>Property</value>
+</data>
+<data name="_Individual" xml:space="preserve">
+ <value>Individual</value>
+</data>
+<data name="_Class" xml:space="preserve">
+ <value>Class</value>
+</data>
+<data name="_IndividualsRelated" xml:space="preserve">
+ <value>Individuals Relates</value>
+</data>
+  <data name="_Accommodations" xml:space="preserve">
+  <value>Accommodations</value>
+</data>
+  <data name="_Accommodation" xml:space="preserve">
+  <value>Accommodation</value>
+</data>
+  <data name="_Accommodation_1" xml:space="preserve">
+  <value>Accommodation</value>
+</data>
+<data name="_InferredAttributes" xml:space="preserve">
+  <value>Additional Relations</value>
+</data>
+  <data name="_Axiom" xml:space="preserve">
+  <value>Axiom</value>
+</data>
+  <data name="accommodationsUnder" xml:space="preserve">
+  <value>Accommodations Under</value>
+</data>
+  <data name="AccType" xml:space="preserve">
+  <value>Accommodation Type</value>
+</data>
+  <data name="actOfferedBy" xml:space="preserve">
+  <value>Activity Offered By</value>
+</data>
+  <data name="actWithRoom" xml:space="preserve">
+  <value>Accommodation With Rooms</value>
+</data>
+  <data name="brandAccommodation" xml:space="preserve">
+  <value>Accommodation Brand</value>
+</data>
+  <data name="hasFacility" xml:space="preserve">
+  <value>Facilities</value>
+</data>
+  <data name="roomFacility" xml:space="preserve">
+  <value>Room Facilities</value>
+</data>
+  <data name="hasRestaurant" xml:space="preserve">
+  <value>Restaurants</value>
+</data>
+  <data name="hasRoom" xml:space="preserve">
+  <value>Rooms</value>
+</data>
+  <data name="isLocated" xml:space="preserve">
+  <value>Location</value>
+</data>
+  <data name="offer" xml:space="preserve">
+  <value>Offer</value>
+</data>
+  <data name="offerActivity" xml:space="preserve">
+  <value>Offer Activity</value>
+</data>
+  <data name="offeredBy" xml:space="preserve">
+  <value>Offered By</value>
+</data>
+  <data name="underBrand" xml:space="preserve">
+  <value>Brand</value>
+</data>
+
+
+  <data name="amenities" xml:space="preserve">
+  <value>Amenities</value>
+</data>
+  <data name="awards" xml:space="preserve">
+  <value>Awards</value>
+</data>
+  <data name="brandCode" xml:space="preserve">
+  <value>Brand</value>
+</data>
+  <data name="code" xml:space="preserve">
+  <value>Code</value>
+</data>
+  <data name="continent" xml:space="preserve">
+  <value>Continent</value>
+</data>
+  <data name="country" xml:space="preserve">
+  <value>Country</value>
+</data>
+  <data name="hasStars" xml:space="preserve">
+  <value>Stars</value>
+</data>
+  <data name="maxPrice" xml:space="preserve">
+  <value>Max Price</value>
+</data>
+  <data name="minPrice" xml:space="preserve">
+  <value>Min Price</value>
+</data>
+  <data name="numberRooms" xml:space="preserve">
+  <value>Rooms Qty</value>
+</data>
+  <data name="onlyAdults" xml:space="preserve">
+  <value>Only Adults</value>
+</data>
+  <data name="visitors" xml:space="preserve">
+  <value>Visitors</value>
+</data> 
+  <data name="_GoBack" xml:space="preserve">
+  <value>Go Back</value>
+</data>
+  <data name="AccommodationsByContinents" xml:space="preserve">
+  <value>Continent</value>
+</data>
+  <data name="MealPlan" xml:space="preserve">
+  <value>Meal Plan</value>
+</data>
+  <data name="HotelRating" xml:space="preserve">
+  <value>Rating</value>
+</data>
+  <data name="AccommodationTypes" xml:space="preserve">
+  <value>Accommodation Type</value>
+</data>
+<data name="AccommodationGroups" xml:space="preserve">
+  <value>Accommodation Group</value>
+</data>
+  <data name="GeneralKnowledge" xml:space="preserve">
+  <value>General</value>
+</data>
+  <data name="NaturalAreas" xml:space="preserve">
+  <value>Type</value>
+</data>
+  <data name="Beach" xml:space="preserve">
+<value>Type</value>
+</data>
+  <data name="_GeneralClasses" xml:space="preserve">
+<value>General Classes</value>
+</data>
+  <data name="_Rooms" xml:space="preserve">
+<value>Rooms</value>
+</data>
+  <data name="_Facilities" xml:space="preserve">
+<value>Facilities</value>
+</data>
+  <data name="_Activities" xml:space="preserve">
+<value>Activities</value>
+</data>
+  <data name="_GeneralKnowledge" xml:space="preserve">
+  <value>General Knowledge</value>
+</data>
+  <data name="_OntologyGeneralVision" xml:space="preserve">
+  <value>General vision of the Ontology</value>
+</data> 
+  <data name="_Notfound" xml:space="preserve">
+  <value>Page Not Found</value>
+</data> 
+  <data name="_Global_PageNoFound" xml:space="preserve">
+  <value>The Page tou are trying to access was not found. Please contact the admin at elvinjreyesv@outlok.com</value>
+</data> 
+  <data name="_Global_ServerError_ReferenceCode" xml:space="preserve">
+  <value>Reference Code</value>
+</data>
+  <data name="_ErrorPage" xml:space="preserve">
+<value>Error Page</value>
+</data>
+  <data name="_Global_ServerError" xml:space="preserve">
+<value>An error has occurred processing your request. Please try again later, or contact the administrator at elvinjreyesv@outlok.com.</value>
+</data>
+</root>

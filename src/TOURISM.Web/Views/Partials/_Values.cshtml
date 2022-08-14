@@ -1,0 +1,47 @@
+﻿@model ValueDTO
+@{
+    var valueTitle = (ViewData["ValueTitle"]).ToString() ?? @Lang("_IndividualsRelated");
+    var controller = this.ViewContext.RouteData.Values["controller"].ToString();
+    var multipleItems = Model.Values.Count > 1;
+
+     var destination = string.Empty;
+     if (Context.Request.Query.ContainsKey("destination"))
+     {
+         destination = (Context.Request.Query["destination"]).ToString();
+     }
+}
+
+@if(controller != "Accommodation")
+{
+    <div class="text mt-2">
+         <h3>@valueTitle:</h3>
+     </div>    
+}
+   
+@if (multipleItems)
+{
+     <span class="fw-bold" style="margin-left:1rem;" property="v:@Model.Property">@Lang(Model.Property):</span>
+}
+<ul class="dark-hover d-flex" style="display:block !important;">
+    @foreach (var val in Model.Values)
+    {
+        <li>
+            @if(controller == "Destinations")
+            {
+                <a asp-controller="Accommodation" asp-action="Detail" asp-route-accommodation="@val.Value.ReplaceBaseOntology()" asp-route-type="@Model.Range" asp-route-destination="@destination" class="text-decoration-underline" style="font-size:1rem" property="v:url">@val.Value.ReplaceOntology()</a>
+            }
+            else
+            {
+                if (!multipleItems)
+                {
+                    <span><span class="fw-bold" property="v:@Model.Property">@Lang(Model.Property):</span> @val.Value.ReplaceOntology()</span>
+                }
+                else
+                {
+                    <span> @val.Value.ReplaceOntology()</span>
+                }
+            }
+        </li>
+    }
+</ul>
+

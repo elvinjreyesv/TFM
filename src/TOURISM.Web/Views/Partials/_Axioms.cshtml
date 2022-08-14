@@ -1,0 +1,31 @@
+﻿@model List<IndividualAxiomDTO>
+
+@{
+    var controller = this.ViewContext.RouteData.Values["controller"].ToString();
+}
+
+<div class="d-block agent-box p-2 mt-2">
+    @foreach (var atr in Model)
+    {
+        @if (atr.Value != null && atr.Value.Any())
+        {
+            ViewData["ValueTitle"] = @atr.Range.ReplaceOntology().Contains("Accommodation") ? @Lang("_Accommodation") : @Lang("_IndividualsRelated");
+            var valueModel = new ValueDTO()
+            {
+                Range = @atr.Range.ReplaceOntology(),
+                Property = @atr.Property.ReplaceOntology(),
+                Values = atr.Value
+            };
+
+             <div class="text">
+                <h3>
+                    @if(controller != "Accommodation")
+                    {
+                        @Html.Raw(string.Concat(Lang("_Axiom"),": ", "<span style = 'font-size:0.8rem; color:#000;'>"," (", "<span class='text-muted small' property='v:axiom'>", atr.Domain.ReplaceOntology(), " - ", atr.Property.ReplaceOntology(), " - ", atr.Range.ReplaceOntology(), " [", atr.PropertyType.ReplaceOntology(), "] ","</span>)</span>"))
+                    }
+                </h3>
+            </div>
+            @await Html.PartialAsync("~/Views/Partials/_Values.cshtml", valueModel)
+        }
+    }
+</div>

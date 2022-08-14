@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Enums\ve-3098.tmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\Ontology\" />
+    <Folder Include="ViewModels\Public\Shared\Outputs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="refit" Version="5.0.23" />
+  </ItemGroup>
+
+</Project>

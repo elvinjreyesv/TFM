@@ -1,0 +1,26 @@
+﻿@model List<OntologyDTO>
+
+@if (Model != null && Model.Any())
+{
+    <div class="d-block agent-box p-5">
+        <div class="text">
+            <div class="meta mb-3">@Lang("_ChildrenClasses")</div>
+        </div>
+        @foreach (var child in Model)
+        {
+            <div class="text">
+                <h3 class="mb-0" property="v:@child.Class.ReplaceOntology()">@Lang("_Class"): </h3>@child.Class.ReplaceOntology()
+            </div>
+
+            @if (child.Individuals != null && child.Individuals.Any())
+            {
+                @await Html.PartialAsync("~/Views/Partials/_Individuals.cshtml", child.Individuals);
+            }
+
+            @if (child.Children != null)
+            {
+                @await Html.PartialAsync("~/Views/Partials/_Children.cshtml", child.Children)            
+            }
+        }
+    </div>
+}

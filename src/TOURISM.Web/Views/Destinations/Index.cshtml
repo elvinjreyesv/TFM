@@ -1,0 +1,58 @@
+﻿@model List<OntologyDTO>
+
+@{
+    ViewData["Title"] = Lang("_Tourism");
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var toHeader = new TopHeaderDTO()
+    {
+        AdditionalText = Lang("_Destinations"),
+        Image = "images/Home/destination.jpg",
+        BreadCrumb = new List<BreadCrumbDTO>()
+        {
+            new BreadCrumbDTO()
+            {
+                Action = @Url.Action("Index", "Home"),
+                Text = Lang("_Home"),
+                Order = 1
+            },
+            new BreadCrumbDTO()
+            {
+                Action = string.Empty,
+                Text = Lang("_Destinations"),
+                Order = 2
+            }
+        }
+    };
+}
+
+@await Html.PartialAsync("~/Views/Shared/Partials/_TopHeader.cshtml", toHeader);
+
+@if (Model != null && Model.Any())
+{
+    <div class="section section-properties">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    var element = item.Class.Replace(settings.Value.OntologyPrefix, "");
+                    var elementName = element.ToLower();
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="property-item mb-30">
+                            <a asp-controller="Destinations" asp-action="Detail" asp-route-destination="@element" class="img" property="v:url">
+                                <img src="@string.Concat(settings.Value.BaseUrl, $"images/Home/{elementName}.jpg")" alt="Image" class="img-fluid" />
+                            </a>
+                            <div class="property-content">
+                                <div class="price mb-2"><span property="v:destination">@Lang(string.Concat("_", element))</span></div>
+                                <div>
+                                    <span class="d-block mb-2 text-black-50" property="v:comment">@Html.Raw(item.Comment)</span>
+                                    <a asp-controller="Destinations" asp-action="Detail" asp-route-destination="@element" class="btn btn-primary py-2 px-3" property="v:url">@Lang("_SeeDetails")</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}

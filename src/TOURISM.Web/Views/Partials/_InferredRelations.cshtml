@@ -1,0 +1,40 @@
+﻿@model List<PropertyDTO>
+
+@{
+    var type = string.Empty;
+    if (Context.Request.Query.ContainsKey("type"))
+    {
+        type = (Context.Request.Query["type"]).ToString();
+    }
+}
+
+@if (Model != null && Model.Any())
+{
+    var axioms = Model.GroupBy(row => row.Class).Select(row => new PropertyDTO()
+    {
+        Class = row.Key,
+        Parent = row.ToList().Count == 1 ? row.FirstOrDefault(row => row != null).Parent : (row.FirstOrDefault(row => !row.Parent.Contains(type)).Parent ?? row.FirstOrDefault().Parent)
+    }).ToList();
+
+    @if (axioms != null && axioms.Any())
+    {
+        var relations = axioms.GroupBy(row => row.Parent).Select(row =>
+        new PropertyDTO()
+        {
+            Parent = row.Key.ReplaceOntology(),
+            Class = string.Join(", ", row.ToList().Select(row=>row.Class.ReplaceOntology()).ToList())
+        }).ToList();
+
+        <div class="d-block agent-box p-2 mt-2">
+            <div class="text"><h3>@Lang("_InferredAttributes")</h3></div>
+            <ul class="dark-hover d-flex" style="display:block !important;">
+                @foreach (var item in relations)
+                {
+                    <li>
+                        <span class="fw-bold" property="v:@item.Parent">@Lang(item.Parent): </span> @item.Class
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "421255cb-c1f7-4d08-91b6-655c016ae26b": {
+      "ProjectGuid": "421255cb-c1f7-4d08-91b6-655c016ae26b",
+      "DisplayName": "TOURISM.App",
+      "ColorIndex": 0
+    },
+    "22818c07-4de9-4b97-a47a-e4ce17cf06c9": {
+      "ProjectGuid": "22818c07-4de9-4b97-a47a-e4ce17cf06c9",
+      "DisplayName": "TOURISM.App.Infraestructure",
+      "ColorIndex": 1
+    },
+    "f66615a1-7d14-41fb-8338-0e2e8054d5b1": {
+      "ProjectGuid": "f66615a1-7d14-41fb-8338-0e2e8054d5b1",
+      "DisplayName": "TOURISM.App.Models",
+      "ColorIndex": 2
+    },
+    "f40434ae-82a0-44cf-b9e1-51e8e6d59842": {
+      "ProjectGuid": "f40434ae-82a0-44cf-b9e1-51e8e6d59842",
+      "DisplayName": "TOURISM.Web",
+      "ColorIndex": 3
+    },
+    "c77086f5-b125-46af-adf6-3c5a1a3175e5": {
+      "ProjectGuid": "c77086f5-b125-46af-adf6-3c5a1a3175e5",
+      "DisplayName": "TOURISM.Web.Api",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}

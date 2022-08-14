@@ -1,0 +1,13 @@
+﻿@model List<PropertyDTO>
+
+@{
+    var validAxioms = Model.Where(row=>row.Axioms !=null && row.Axioms.Any()).SelectMany(row=>row.Axioms).ToList();
+    var inferredProperties = Model.Where(row=>row.Axioms ==null || !row.Axioms.Any()).ToList();
+}
+
+@if(validAxioms !=null && validAxioms.Any())
+{
+    @await Html.PartialAsync("~/Views/Partials/_Axioms.cshtml", validAxioms)   
+}
+
+@await Html.PartialAsync("~/Views/Partials/_InferredRelations.cshtml", inferredProperties)
