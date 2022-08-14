@@ -36,12 +36,13 @@ namespace TOURISM.Web.Controllers
 
         public IActionResult Ontology()
         {
-            return View(); 
+            return View();
         }
 
         [HttpPost]
         public IActionResult ChangeLanguage(string returnUrl, string newLang)
         {
+            returnUrl = returnUrl.Replace("&amp;", "&");
             if (string.IsNullOrWhiteSpace(newLang) || newLang == CultureTwoLetterName)
                 return Json(AppResponseAjax.CreateTarget(returnUrl, false));
 
