@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TestOwl\\TestOwl.csproj": {}
+    "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TestOwl\\TestOwl.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TestOwl\\TestOwl.csproj": {
+    "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TestOwl\\TestOwl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TestOwl\\TestOwl.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TestOwl\\TestOwl.csproj",
         "projectName": "TestOwl",
-        "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TestOwl\\TestOwl.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TestOwl\\TestOwl.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TestOwl\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TestOwl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

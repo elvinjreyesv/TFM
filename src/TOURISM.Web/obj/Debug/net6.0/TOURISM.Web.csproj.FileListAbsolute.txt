@@ -416,3 +416,19 @@ C:\Users\user\OneDrive\3- ESTUDIAR\7- SEVILLA\MATERIAS\OTROS\TFM\Code\Tourism On
 C:\Users\user\OneDrive\3- ESTUDIAR\7- SEVILLA\MATERIAS\OTROS\TFM\Code\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.pdb
 C:\Users\user\OneDrive\3- ESTUDIAR\7- SEVILLA\MATERIAS\OTROS\TFM\Code\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.genruntimeconfig.cache
 C:\Users\user\OneDrive\3- ESTUDIAR\7- SEVILLA\MATERIAS\OTROS\TFM\Code\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\ref\TOURISM.Web.dll
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.csproj.AssemblyReference.cache
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.Resources.Lang.resources
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.Resources.Lang.es.resources
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.csproj.GenerateResource.cache
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\RefitStubs.g.cs
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.AssemblyInfoInputs.cache
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.AssemblyInfo.cs
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.RazorAssemblyInfo.cache
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.RazorAssemblyInfo.cs
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.dll
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\refint\TOURISM.Web.dll
+C:\Users\user\Documents\Tourism Ontology\src\TOURISM.Web\obj\Debug\net6.0\TOURISM.Web.pdb

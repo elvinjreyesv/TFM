@@ -14,7 +14,7 @@
 
             @if (child.Individuals != null && child.Individuals.Any())
             {
-                @await Html.PartialAsync("~/Views/Partials/_Individuals.cshtml", child.Individuals);
+                @await Html.PartialAsync("~/Views/Partials/_Individuals.cshtml", child.Individuals)
             }
 
             @if (child.Children != null)

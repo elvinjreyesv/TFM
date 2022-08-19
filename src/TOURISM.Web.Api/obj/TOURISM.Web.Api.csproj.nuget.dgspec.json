@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web.Api\\TOURISM.Web.Api.csproj": {}
+    "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.Web.Api\\TOURISM.Web.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj": {
+    "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj",
         "projectName": "TOURISM.App.Infraestructure",
-        "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj"
+              "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj": {
+                "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj"
               }
             }
           }
@@ -82,14 +82,14 @@
         }
       }
     },
-    "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj": {
+    "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj",
         "projectName": "TOURISM.App.Models",
-        "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Models\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj": {
+    "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj",
         "projectName": "TOURISM.App",
-        "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,11 +178,11 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj"
+              "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj"
               },
-              "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj"
+              "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj": {
+                "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Models\\TOURISM.App.Models.csproj"
               }
             }
           }
@@ -243,14 +243,14 @@
         }
       }
     },
-    "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web.Api\\TOURISM.Web.Api.csproj": {
+    "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.Web.Api\\TOURISM.Web.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web.Api\\TOURISM.Web.Api.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.Web.Api\\TOURISM.Web.Api.csproj",
         "projectName": "TOURISM.Web.Api",
-        "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web.Api\\TOURISM.Web.Api.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.Web.Api\\TOURISM.Web.Api.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web.Api\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.Web.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -271,11 +271,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj"
+              "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App.Infraestructure\\TOURISM.App.Infraestructure.csproj"
               },
-              "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj"
+              "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj": {
+                "projectPath": "C:\\Users\\user\\Documents\\Tourism Ontology\\src\\TOURISM.App\\TOURISM.App.csproj"
               }
             }
           }
