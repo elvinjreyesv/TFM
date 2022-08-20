@@ -32,9 +32,7 @@
                         </ul>
                     </li>
                     <li><a asp-controller="Home" asp-action="Ontology">@Lang("_Ontology")</a></li>
-                    <li><a target="_blank"
-                            href="@string.Concat(settings.Value.BaseUrl, settings.Value.DocumentationFile)">@Lang("_Paper")</a>
-                    </li>
+                   <li><a target="_blank" href="@string.Concat(settings.Value.BaseUrl, settings.Value.DocumentationFile.Url, "?v=", settings.Value.DocumentationFile.Version)">@Lang("_Paper")</a></li>
                     <li class="language-container">
                         <a class="change-lang" href="#" value="@newLanguage">@languageName</a>
                     </li>

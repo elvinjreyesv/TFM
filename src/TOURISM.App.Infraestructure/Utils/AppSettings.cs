@@ -16,12 +16,16 @@ namespace TOURISM.App.Infrastructure.Utils
         public string AesKey { get; set; }
         public string AesIv { get; set; }
         public string OntologyPrefix { get; set; }
-        public string DocumentationFile { get; set; }
+        public DocumentationFile DocumentationFile { get; set; }
         public Extensions Extensions { get; set; }
     }
-
     public class Extensions
     {
         public List<string> Include { get; set; }
+    }
+    public class DocumentationFile
+    {
+        public string Url { get; set; }
+        public int Version { get; set; }
     }
 }
