@@ -12,7 +12,7 @@ namespace TOURISM.App.Models.ViewModels.Public.Content.Outputs
         public string Property { get; set; }
         public string PropertyType { get; set; }
         public string Range { get; set; }
-        public List<AxiomValueDTO> Value { get; set; }
+        public List<AxiomValueDTO> Values { get; set; }
     }
     public class AxiomValueDTO
     {

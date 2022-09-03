@@ -23,6 +23,14 @@
                     </ol>
                 </nav>
             </div>
+            @if (Model.ShowSearch)
+            {
+                <div class="col-lg-7 col-sm-12 text-center" style="margin-top:-12rem;">
+                    <div class="mb-3">
+                        <input type="text" v-model="search.new" class="form-control px-4" placeholder="@Lang("_SearchPlaceholder1")" style="border-radius: 25px;">
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </div>

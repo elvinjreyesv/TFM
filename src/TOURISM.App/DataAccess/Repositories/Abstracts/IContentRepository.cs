@@ -10,6 +10,6 @@ namespace TOURISM.App.DataAccess.Repositories.Abstracts
         List<OntologyDTO> GetOntologySubClases();
         List<OntologyDTO> GetAnyOntologyElement(string parentClass);
         List<OntologyDTO> GetOntologySubClasesByParent(string parentClass);
-        List<IndividualPropertiesDTO> GetOntologyIndividuals(string parentClass, List<string> superClasses, string additionalFilter = "");
+        List<IndividualPropertiesDTO> GetOntologyIndividuals(string parentClass, List<string> superClasses, string additionalFilter = "", bool includeProperties = true);
     }
 }

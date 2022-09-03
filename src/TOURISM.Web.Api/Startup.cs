@@ -61,6 +61,10 @@ namespace TOURISM.Web.Api
 
             }).AddXmlSerializerFormatters();
             services.AddHttpContextAccessor();
+
+            services.AddMemoryCache();
+            services.AddResponseCaching();
+
             services.AddSwaggerDocumentation();
 
             #region Repositories

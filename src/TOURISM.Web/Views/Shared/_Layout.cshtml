@@ -50,7 +50,9 @@
 
     @await Html.PartialAsync("~/Views/Shared/Partials/_Nav.cshtml")
 
-    @RenderBody()
+    <div id="app">
+        @RenderBody()
+    </div>
 
     @await Html.PartialAsync("~/Views/Shared/Partials/_Footer.cshtml")
 
@@ -70,7 +72,9 @@
         <script src="~/js/lib/sweetalert2.all.min.js" asp-append-version="true"></script>
         <script src="~/js/lib/jquery.validate.min.js" asp-append-version="true"></script>
         <script src="~/js/lib/jquery.validate.unobtrusive.min.js" asp-append-version="true"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.cjs.min.js"></script>
+        <script src="~/js/lib/vue.global.min.js"></script>
+        <script src="~/js/lib/vuejs-paginate-next.umd.js"></script>
+        <script src="~/js/lib/jquery.typeahead.min.js"></script>
         <script src="~/js/bundle.public.js" asp-append-version="true"></script>
     </environment>
 
@@ -110,11 +114,20 @@
                 integrity="sha256-9GycpJnliUjJDVDqP0UEu/bsm9U+3dnQUH8+3W10vkY="
                 crossorigin="anonymous">
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.cjs.min.js" 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.min.js" 
                 integrity="sha512-4ztiRs4Iu216VkGake07ojPy+Jp5LpaRV8WgGblQIZj/6O3st4NYucCsWKZ/RWyoBgJu941+PXBFnqgVAaDPgw==" 
                 crossorigin="anonymous" 
                 referrerpolicy="no-referrer">
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.js" 
+            integrity="sha512-Rc24PGD2NTEGNYG/EMB+jcFpAltU9svgPcG/73l1/5M6is6gu3Vo1uVqyaNWf/sXfKyI0l240iwX9wpm6HE/Tg==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.js" 
+            integrity="sha512-Rc24PGD2NTEGNYG/EMB+jcFpAltU9svgPcG/73l1/5M6is6gu3Vo1uVqyaNWf/sXfKyI0l240iwX9wpm6HE/Tg==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"></script>
         <script src="~/js/bundle.public.min.js" asp-append-version="true"></script>
     </environment>
     @Html.RenderPartialViewScripts()

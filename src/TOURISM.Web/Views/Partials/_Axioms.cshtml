@@ -7,14 +7,14 @@
 <div class="d-block agent-box p-2 mt-2">
     @foreach (var atr in Model)
     {
-        @if (atr.Value != null && atr.Value.Any())
+        @if (atr.Values != null && atr.Values.Any())
         {
             ViewData["ValueTitle"] = @atr.Range.ReplaceOntology().Contains("Accommodation") ? @Lang("_Accommodation") : @Lang("_IndividualsRelated");
             var valueModel = new ValueDTO()
             {
                 Range = @atr.Range.ReplaceOntology(),
                 Property = @atr.Property.ReplaceOntology(),
-                Values = atr.Value
+                Values = atr.Values
             };
 
              <div class="text">

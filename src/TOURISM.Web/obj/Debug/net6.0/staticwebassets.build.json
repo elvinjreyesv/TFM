@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G5boPsdvugqdCb5Kl4SjlU3TXMKmuod4HLYIdVQC5+Q=",
+  "Hash": "gGK1GBEE9w18esPM3L5ekkV7wco+/r/TQji5gBMXT94=",
   "Source": "TOURISM.Web",
   "BasePath": "_content/TOURISM.Web",
   "Mode": "Default",
@@ -204,12 +204,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\files\\Memoria.pdf",
+      "Identity": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\files\\tfm_final.pdf",
       "SourceId": "TOURISM.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\",
       "BasePath": "_content/TOURISM.Web",
-      "RelativePath": "files/Memoria.pdf",
+      "RelativePath": "files/tfm_final.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,7 +218,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\Memoria.pdf"
+      "OriginalItemSpec": "wwwroot\\files\\tfm_final.pdf"
     },
     {
       "Identity": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\fonts\\flaticon\\backup.txt",
@@ -1239,6 +1239,91 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\lib\\tiny-slider.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\js\\lib\\vue.global.js",
+      "SourceId": "TOURISM.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\",
+      "BasePath": "_content/TOURISM.Web",
+      "RelativePath": "js/lib/vue.global.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\lib\\vue.global.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\js\\lib\\vue.global.min.js",
+      "SourceId": "TOURISM.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\",
+      "BasePath": "_content/TOURISM.Web",
+      "RelativePath": "js/lib/vue.global.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\lib\\vue.global.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\js\\lib\\vue.global.prod.js",
+      "SourceId": "TOURISM.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\",
+      "BasePath": "_content/TOURISM.Web",
+      "RelativePath": "js/lib/vue.global.prod.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\lib\\vue.global.prod.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\js\\lib\\vue.global.prod.min.js",
+      "SourceId": "TOURISM.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\",
+      "BasePath": "_content/TOURISM.Web",
+      "RelativePath": "js/lib/vue.global.prod.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\lib\\vue.global.prod.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\js\\lib\\vuejs-paginate-next.umd.js",
+      "SourceId": "TOURISM.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\3- ESTUDIAR\\7- SEVILLA\\MATERIAS\\OTROS\\TFM\\Code\\Tourism Ontology\\src\\TOURISM.Web\\wwwroot\\",
+      "BasePath": "_content/TOURISM.Web",
+      "RelativePath": "js/lib/vuejs-paginate-next.umd.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\lib\\vuejs-paginate-next.umd.js"
     }
   ]
 }

@@ -655,6 +655,10 @@ progress {
     .container, .container-sm {
         max-width: 540px;
     }
+
+    .typeahead__list > li a, .typeahead__empty, .typeahead__item {
+        width: 90%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -14780,3 +14784,41 @@ nav[aria-label="breadcrumb"] li:before {
                 background: #00204a;
                 color: #fff;
             }
+
+.typeahead__list {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+    .typeahead__list > li {
+        position: relative !important;
+        border-top: 0.1px solid #f7f4f4 !important;
+    }
+
+.typeahead__list li a {
+    position: relative;
+}
+
+.result-container {
+    position: absolute;
+    color: #777;
+    top: -1.5em;
+}
+
+.typeahead-search li a {
+    position: absolute;
+    right: 16px;
+    top: 10px;
+}
+
+.typeahead__list > li a, .typeahead__empty, .typeahead__item {
+    color: #fff;
+    list-style: none;
+    width: 96%;
+}
+
+.chosen-container-single .chosen-single {
+    background: #fff !important;
+    border: 0.1px solid #efefef !important;
+}

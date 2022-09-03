@@ -121,7 +121,10 @@
     <value>All rights reserved</value>
   </data> 
     <data name="_SearchPlaceholder" xml:space="preserve">
-    <value>Destination, accomodation, room</value>
+    <value>Destination</value>
+  </data>
+  <data name="_SearchPlaceholder1" xml:space="preserve">
+    <value>Destination, Accommodation...</value>
   </data>
     <data name="_Discover" xml:space="preserve">
     <value>Discover</value>
@@ -199,7 +202,7 @@
  <value>Class</value>
 </data>
 <data name="_IndividualsRelated" xml:space="preserve">
- <value>Individuals Relates</value>
+ <value>Individuals Related</value>
 </data>
   <data name="_Accommodations" xml:space="preserve">
   <value>Accommodations</value>
@@ -258,8 +261,6 @@
   <data name="underBrand" xml:space="preserve">
   <value>Brand</value>
 </data>
-
-
   <data name="amenities" xml:space="preserve">
   <value>Amenities</value>
 </data>

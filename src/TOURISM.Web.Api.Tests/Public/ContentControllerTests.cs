@@ -19,7 +19,7 @@ namespace TOURISM.Web.Api.Tests.Public
             };
 
             dto.Token = TokenEncrypter.Encrypt(dto, SecretKey);
-            var response = await ApiClient.GetClassContent("http://www.semanticweb.org/user/ontologies/2022/0/tourism#Destination", dto.SiteId, dto.Lang, dto.IpAddressClient, dto.Token);
+            var response = await ApiClient.GetClassContent("http://www.semanticweb.org/user/ontologies/2022/0/tourism#Destination", "", dto.SiteId, dto.Lang, dto.IpAddressClient, dto.Token);
             Assert.IsNotNull(response);
         }
     }

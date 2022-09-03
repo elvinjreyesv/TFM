@@ -24,7 +24,14 @@ namespace TOURISM.App.Services
             var output = _contentRepository.GetOntologySubClasesByParent(site.OntologyDetails.RootEntity);
             return output;
         }
-        public List<OntologyDTO> GetClassContent(string itemClass)
+        public List<OntologyDTO> GetRootEntityChildren()
+        {
+            var site = _settingsService.SiteInfo();
+
+            var output = GetClassContent(site.OntologyDetails.RootEntity, string.Empty, false);
+            return output;
+        }
+        public List<OntologyDTO> GetClassContent(string itemClass, string individual = "", bool includeProperties = true)
         {
             var output = Enumerable.Empty<OntologyDTO>().ToList();
 
@@ -33,9 +40,12 @@ namespace TOURISM.App.Services
 
             output = _contentRepository.GetOntologySubClasesByParent(itemClass);
 
+            if (!string.IsNullOrWhiteSpace(individual))
+                individual = $"FILTER( ?individual=<{individual}>)";
+
             foreach (var item in output)
             {
-                var individuals = _contentRepository.GetOntologyIndividuals(item.Class, superClassesList);
+                var individuals = _contentRepository.GetOntologyIndividuals(item.Class, superClassesList, individual, includeProperties);
                 if (individuals != null && individuals.Any())
                     item.Individuals = individuals;
             }

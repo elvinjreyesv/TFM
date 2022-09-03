@@ -221,7 +221,7 @@ namespace TOURISM.App.DataAccess.Repositories
 
             return output;
         }
-        public List<IndividualPropertiesDTO> GetOntologyIndividuals(string parentClass, List<string> superClasses, string additionalFilter="")
+        public List<IndividualPropertiesDTO> GetOntologyIndividuals(string parentClass, List<string> superClasses, string additionalFilter="", bool includeProperties = true)
         {
             var output = Enumerable.Empty<IndividualPropertiesDTO>().ToList();
 
@@ -240,7 +240,7 @@ namespace TOURISM.App.DataAccess.Repositories
             if (results == null || !results.Any())
                 return output;
 
-            output = ProcessIndividualProperties(results, superClasses);
+            output = ProcessIndividualProperties(results, superClasses, includeProperties);
 
             return output;
         }
@@ -304,10 +304,10 @@ namespace TOURISM.App.DataAccess.Repositories
                 var axiomValues = FillAxiomValue(axiomValuequery);
 
                 if (axiomValues != null && axiomValues.Any())
-                    item.Value.AddRange(axiomValues);
+                    item.Values.AddRange(axiomValues);
             }
 
-            individualAxioms = individualAxioms.Where(row => row.Value != null && row.Value.Any()).ToList();
+            individualAxioms = individualAxioms.Where(row => row.Values != null && row.Values.Any()).ToList();
 
             return individualAxioms;
         }
@@ -376,7 +376,7 @@ namespace TOURISM.App.DataAccess.Repositories
 
             return output;
         }
-        private List<IndividualPropertiesDTO> ProcessIndividualProperties(List<SparqlResult> results, List<string> superclasses)
+        private List<IndividualPropertiesDTO> ProcessIndividualProperties(List<SparqlResult> results, List<string> superclasses, bool includeProperties = true)
         {
             var output = Enumerable.Empty<IndividualPropertiesDTO>().ToList();
 
@@ -389,17 +389,20 @@ namespace TOURISM.App.DataAccess.Repositories
             foreach (var ind in differentIndividuals)
             {
                 var items = Enumerable.Empty<PropertyDTO>().ToList();
-                foreach (var item in ind.ToList())
+                if (includeProperties)
                 {
-                    items.Add(new PropertyDTO()
+                    foreach (var item in ind.ToList())
                     {
-                        Class = item.Class,
-                        Comment = item.Comment,
-                        Image = item.Image,
-                        Parent = item.Parent
-                    });
+                        items.Add(new PropertyDTO()
+                        {
+                            Class = item.Class,
+                            Comment = item.Comment,
+                            Image = item.Image,
+                            Parent = item.Parent
+                        });
+                    }
                 }
-
+               
                 output.Add(new IndividualPropertiesDTO()
                 {
                     IndividualName = ind.Key,
@@ -410,38 +413,41 @@ namespace TOURISM.App.DataAccess.Repositories
             if (output == null || !output.Any())
                 return output;
 
-            foreach (var ind in output)
+            if (includeProperties)
             {
-                foreach (var item in ind.Properties)
+                foreach (var ind in output)
                 {
-                    var axioms = GetIndividualAxiom(item.Class, ind.IndividualName);
-
-                    if (axioms != null && axioms.Any())
-                        axioms = axioms.ToList();
-
-                    item.Axioms = axioms;
-                }
-            }
-
-            foreach (var item in output)
-            {
-                var axioms = ((item.Properties.SelectMany(row => row.Axioms)).GroupBy(row => row.Property))
-                    .Select(row => new IndividualAxiomDTO()
+                    foreach (var item in ind.Properties)
                     {
-                        Domain = row.FirstOrDefault().Domain,
-                        Property = row.FirstOrDefault().Property,
-                        PropertyType = row.FirstOrDefault().PropertyType,
-                        Range = row.FirstOrDefault().Range,
-                        Value = row.FirstOrDefault().Value
-                    }).ToList();
+                        var axioms = GetIndividualAxiom(item.Class, ind.IndividualName);
 
-                item.Properties.ForEach(row => row.Axioms = Enumerable.Empty<IndividualAxiomDTO>().ToList());
+                        if (axioms != null && axioms.Any())
+                            axioms = axioms.ToList();
 
-                var parentClassProperty = item.Properties.FirstOrDefault(row => superclasses.Contains(row.Parent));
-                if (parentClassProperty != null)
-                    parentClassProperty.Axioms = axioms;
-                else
-                    item.Properties.FirstOrDefault().Axioms = axioms;
+                        item.Axioms = axioms;
+                    }
+                }
+
+                foreach (var item in output)
+                {
+                    var axioms = ((item.Properties.SelectMany(row => row.Axioms)).GroupBy(row => row.Property))
+                        .Select(row => new IndividualAxiomDTO()
+                        {
+                            Domain = row.FirstOrDefault().Domain,
+                            Property = row.FirstOrDefault().Property,
+                            PropertyType = row.FirstOrDefault().PropertyType,
+                            Range = row.FirstOrDefault().Range,
+                            Values = row.FirstOrDefault().Values
+                        }).ToList();
+
+                    item.Properties.ForEach(row => row.Axioms = Enumerable.Empty<IndividualAxiomDTO>().ToList());
+
+                    var parentClassProperty = item.Properties.FirstOrDefault(row => superclasses.Contains(row.Parent));
+                    if (parentClassProperty != null)
+                        parentClassProperty.Axioms = axioms;
+                    else
+                        item.Properties.FirstOrDefault().Axioms = axioms;
+                }
             }
 
             output = output.OrderBy(row => row.IndividualName).ToList();
@@ -461,7 +467,7 @@ namespace TOURISM.App.DataAccess.Repositories
                     Domain = GetFieldValue(item, "parent"),
                     Property = GetFieldValue(item, "domain"),
                     PropertyType = GetFieldValue(item, "propertyType"),
-                    Value = Enumerable.Empty<AxiomValueDTO>().ToList(),
+                    Values = Enumerable.Empty<AxiomValueDTO>().ToList(),
                     Range = GetFieldValue(item, "range"),
                 });
             }

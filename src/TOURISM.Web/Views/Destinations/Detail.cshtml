@@ -12,11 +12,15 @@
         destinationImage = destinationName.ToLower();
     }
 
+    var controller = this.ViewContext.RouteData.Values["controller"].ToString();
+    var individualTitle = Lang(string.Concat("_", controller, "_1")) ?? Lang("_Individual");
+
     var toHeader = new TopHeaderDTO()
-    {
-        AdditionalText = Lang("_Discover"),
-        Image = $"images/Home/Top/{destinationImage}.jpg",
-        BreadCrumb = new List<BreadCrumbDTO>()
+            {
+                AdditionalText = Lang("_Discover"),
+                ShowSearch = true,
+                Image = $"images/Home/Top/{destinationImage}.jpg",
+                BreadCrumb = new List<BreadCrumbDTO>()
         {
             new BreadCrumbDTO()
             {
@@ -37,10 +41,11 @@
                 Order = 3
             }
         }
-    };
+            };
+    var ontology = Html.Raw(Json.Serialize(Model));
 }
 
-@await Html.PartialAsync("~/Views/Shared/Partials/_TopHeader.cshtml", toHeader);
+@await Html.PartialAsync("~/Views/Shared/Partials/_TopHeader.cshtml", toHeader)
 
 @if (Model != null)
 {
@@ -49,20 +54,63 @@
             <div class="row justify-content-between">
                 <div class="col-lg-12">
                     <h2 class="heading text-primary" property="v:destination">@Lang(string.Concat("_", destinationName))</h2>
-                    @foreach (var sub in Model)
-                    {
-                        @if (sub.Children != null && sub.Children.Any())
-                        {
-                            @await Html.PartialAsync("~/Views/Partials/_Children.cshtml", sub.Children)
-                        }
+                    <div v-for="sub in getOntologyItem">
+                        <div class="d-block agent-box mt-3" v-for="ind in sub.individuals">
+                            @if (controller != "Accommodation")
+                            {
+                                <div class="text">
+                                    <h3>@individualTitle: <span style="font-size:0.8rem; color:#000; ">{{replaceOntology(ind.individualName)}}</span></h3>
+                                </div>
+                            }
 
-                        @if (sub.Individuals != null && sub.Individuals.Any())
-                        {
-                            @await Html.PartialAsync("~/Views/Partials/_Individuals.cshtml", sub.Individuals)
-                        }
-                    }
+                            <div v-show="ind.properties !=null">
+                                <div v-if="ind.properties.filter(row => row.axioms !== null) != null">
+                                    <div class="d-block agent-box p-2 mt-2">
+                                        <div v-for="prop in ind.properties.filter(row => row.axioms !== null)">
+                                            <div v-if="prop.axioms.length > 0" v-for="atr in prop.axioms">
+                                                <div class="text">
+                                                    <h3>
+                                                        @Lang("_Axiom"): <span style='font-size:0.8rem; color:#000;'><span class='text-muted small' property='v:axiom'>{{replaceOntology(atr.domain)}} - {{replaceOntology(atr.property)}} - {{replaceOntology(atr.range)}} [{{replaceOntology(atr.propertyType)}}]</span></span>
+                                                    </h3>
+                                                </div>
+
+                                                <div v-show="atr.values != null && atr.values != undefined">
+                                                    <div class="text mt-2">
+                                                        <h3>@Lang("_IndividualsRelated"):</h3>
+                                                    </div>
+                                                    <span v-show="atr.values.length > 1" class="fw-bold" style="margin-left:1rem;" :property="'v: '+ replaceOntology(atr.property)">{{resources(replaceOntology(atr.property))}}:</span>
+
+                                                    <ul class="dark-hover d-flex" style="display:block !important;">
+                                                        <li v-for="val in atr.values">
+                                                            <a :href="'@settings.Value.BaseUrl' + 'Accommodation/Detail?accommodation=' + replaceBaseOntology(val.value) + '&type=' + replaceBaseOntology(atr.range) + '&destination=@destinationName'" class="text-decoration-underline" style="font-size:1rem" property="v:url">{{replaceOntology(val.value)}}</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div v-else>
+                                                <div class="text"><h3>@Lang("_InferredAttributes")</h3></div>
+                                                <ul class="dark-hover d-flex" style="display:block !important;">
+                                                    <li v-for="prop in ind.properties">
+                                                        <span class="fw-bold" property="'v:'+prop.parent">{{resources(prop.parent)}}: </span> {{prop.class}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+}
+
+@section Scripts{
+    <script>
+        (function () {
+            createVueInstance('@ontology');
+        })();
+    </script>
 }

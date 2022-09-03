@@ -14,13 +14,11 @@ namespace TOURISM.Web.Utils.Extensions
         {
             return Regex.Replace(text, @"\s+", String.Empty);
         }
-
         public static string ReplaceBaseOntology(this string text)
         {
             return text.Replace("http://www.semanticweb.org/user/ontologies/2022/0/tourism#", string.Empty)
                 .Replace("http://www.w3.org/2002/07/owl#", string.Empty);
         }
-
         public static string ReplaceOntology(this string text)
         {
             return text.Replace("http://www.semanticweb.org/user/ontologies/2022/0/tourism#", string.Empty)

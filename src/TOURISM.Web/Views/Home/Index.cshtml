@@ -9,15 +9,16 @@
     <div class="hero-slide">
         <div class="img overlay" style="background-image: url('@string.Concat(settings.Value.BaseUrl, "images/Home/tourism.jpg")')"></div>
     </div>
-    <div class="container d-none">
+    <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-9 text-center" style="margin-top:7.5rem;">
                 <h1 class="heading" data-aos="fade-up">
                     @Lang("_Discover")
                 </h1>
-                <form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-                    <input type="text" class="form-control px-4" placeholder="@Lang("_SearchPlaceholder")..." />
-                    <button type="submit" class="btn btn-primary">@Lang("_Search")</button>
+                <form asp-controller="Destinations" asp-action="CityDetail" class="narrow-w form-search mb-1 typeahead__list" data-aos="fade-up" data-aos-delay="200">
+                    <div class="typeahead__container">
+                        <input type="text" class="js-typeahead-items form-control" placeholder="@Lang("_SearchPlaceholder")..." name="Items[query]" disabled>
+                    </div>
                 </form>
             </div>
         </div>
@@ -53,7 +54,6 @@
                                     <a asp-controller="Destinations" asp-action="Detail" asp-route-destination="@element" class="img" property="v:url">
                                         <img src="@string.Concat(settings.Value.BaseUrl, $"images/Home/{elementName}.jpg")" alt="Image" class="img-fluid" />
                                     </a>
-
                                     <div class="property-content">
                                         <div class="row destination">
                                             <div class="col-md-9 col-sm-12">
@@ -83,3 +83,12 @@
         }
     </div>
 </div>
+
+@section Scripts{
+    <script>
+        (function () {
+            TourismApp.Data.Url = '@Url.Action("BaseChildren", "Home")';
+            setSearchItems();
+        })();
+    </script>
+}

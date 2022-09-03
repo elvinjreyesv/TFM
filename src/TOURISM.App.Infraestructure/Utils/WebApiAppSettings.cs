@@ -6,6 +6,7 @@ namespace TOURISM.App.Infrastructure.Utils
     {
         public JwtConfig JwtConfig { get; set; }
         public List<SiteInfo> SiteInfos { get; set; }
+        public CacheConfiguration CacheConfiguration { get; set; }
     }
     public class JwtConfig
     {
@@ -35,5 +36,10 @@ namespace TOURISM.App.Infrastructure.Utils
         public string IndividualClassValidation { get; set; }
         public List<string> IndividualReplacePattern { get; set; }
         public string CommentReplacePattern { get; set; }
+    }
+    public class CacheConfiguration
+    {
+        public int AbsoluteExpirationSeconds { get; set; }
+        public int SlidingExpirationSeconds { get; set; }
     }
 }

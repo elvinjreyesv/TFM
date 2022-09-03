@@ -6,6 +6,7 @@ namespace TOURISM.App.Models.ViewModels.Public.Content.Inputs
     {
         public string ItemClass { get; set; }
         public string ParentClass { get; set; }
+        public string Individual { get; set; }
 
         public override void SetDefaults()
         {

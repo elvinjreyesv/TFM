@@ -15,6 +15,7 @@ namespace TOURISM.Web.Utils.Services.Abstracts
         Task<List<OntologyDTO>> GetClassContent(PublicContentInputDTO dto, string secretKey);
         Task<List<IndividualPropertiesDTO>> GetIndividualContent(PublicContentInputDTO dto, string secretKey);
         Task<List<OntologyDTO>> GetFullOntology(PublicContentInputDTO dto, string secretKey);
+        Task<List<OntologyDTO>> GetRootEntityChildren(PublicContentInputDTO dto, string secretKey);
         #endregion
         #endregion
         #endregion

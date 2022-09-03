@@ -6,11 +6,11 @@
     //Move to show from service
     var destinationItems = new List<string>()
     {
-    "Beach",
-    "CulturalAreas",
-    "NaturalAreas",
-    "TownAndCities",
-    "WinterSportAreas"
+        "Beach",
+        "CulturalAreas",
+        "NaturalAreas",
+        "TownAndCities",
+        "WinterSportAreas"
     };
 }
 
@@ -24,22 +24,19 @@
                     <li class="has-children">
                         <a asp-controller="Destinations" asp-action="Index">@Lang("_Destinations")</a>
                         <ul class="dropdown">
-                            @foreach (var item in destinationItems)
+                            @foreach(var item in destinationItems)
                             {
-                                <li><a asp-controller="Destinations" asp-action="Detail" asp-route-destination="@item"
-                                    class="loading">@Lang(string.Concat("_", item))</a></li>
+                                <li><a asp-controller="Destinations" asp-action="Detail" asp-route-destination="@item" class="loading">@Lang(string.Concat("_", item))</a></li>
                             }
                         </ul>
                     </li>
                     <li><a asp-controller="Home" asp-action="Ontology">@Lang("_Ontology")</a></li>
-                   <li><a target="_blank" href="@string.Concat(settings.Value.BaseUrl, settings.Value.DocumentationFile.Url, "?v=", settings.Value.DocumentationFile.Version)">@Lang("_Paper")</a></li>
+                    <li><a target="_blank" href="@string.Concat(settings.Value.BaseUrl, settings.Value.DocumentationFile.Url, "?v=", settings.Value.DocumentationFile.Version)">@Lang("_Paper")</a></li>
                     <li class="language-container">
                         <a class="change-lang" href="#" value="@newLanguage">@languageName</a>
                     </li>
                 </ul>
-                <a href="#"
-                    class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
-                    data-toggle="collapse" data-target="#main-navbar">
+                <a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
                     <span></span>
                 </a>
             </div>
@@ -47,18 +44,17 @@
     </div>
 </nav>
 
-@Html.Script(@
-<script type="text/javascript">
-    $('.language-container .change-lang').on('click', function (e) {
-        var lang = $(this).attr('value');
-        if (lang !== '') {
-            e.preventDefault();
-            TourismApp.Ajax.Post('@Url.Action("ChangeLanguage", "Home")', { returnUrl: "@Context.Request.GetEncodedUrl()", newLang: lang },
-                function (datos) {
-                    window.location.href = datos.targetUrl.url;
-                },
-                function (datos) { }
-            )
-        }
-    });
-</script>)
+@Html.Script(@<script type="text/javascript">
+            $('.language-container .change-lang').on('click', function(e) {
+                var lang = $(this).attr('value');
+                if (lang !== '') {
+                    e.preventDefault();
+                    TourismApp.Ajax.Post('@Url.Action("ChangeLanguage", "Home")', { returnUrl: '@Context.Request.GetEncodedUrl()', newLang: lang },
+                        function(datos) {
+                            window.location.href = datos.targetUrl.url;
+                        },
+                        function(datos) { }
+                    )
+                }
+            });
+    </script>)

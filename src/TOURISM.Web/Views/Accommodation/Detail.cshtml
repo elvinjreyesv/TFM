@@ -38,7 +38,7 @@
     };
 }
 
-@await Html.PartialAsync("~/Views/Shared/Partials/_TopHeader.cshtml", toHeader);
+@await Html.PartialAsync("~/Views/Shared/Partials/_TopHeader.cshtml", toHeader)
 
 @if (Model != null && Model.Individuals != null && Model.Individuals.Any())
 {

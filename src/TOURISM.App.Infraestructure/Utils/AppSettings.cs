@@ -19,10 +19,12 @@ namespace TOURISM.App.Infrastructure.Utils
         public DocumentationFile DocumentationFile { get; set; }
         public Extensions Extensions { get; set; }
     }
+
     public class Extensions
     {
         public List<string> Include { get; set; }
     }
+
     public class DocumentationFile
     {
         public string Url { get; set; }

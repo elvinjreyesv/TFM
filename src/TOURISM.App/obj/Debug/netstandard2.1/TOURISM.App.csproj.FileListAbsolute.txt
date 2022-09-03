@@ -15,20 +15,3 @@ C:\Users\user\OneDrive\3- ESTUDIAR\7- SEVILLA\MATERIAS\OTROS\TFM\Code\Tourism On
 C:\Users\user\OneDrive\3- ESTUDIAR\7- SEVILLA\MATERIAS\OTROS\TFM\Code\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.csproj.CopyComplete
 C:\Users\user\OneDrive\3- ESTUDIAR\7- SEVILLA\MATERIAS\OTROS\TFM\Code\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.dll
 C:\Users\user\OneDrive\3- ESTUDIAR\7- SEVILLA\MATERIAS\OTROS\TFM\Code\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.pdb
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\bin\Debug\netstandard2.1\Data\tourism.rdf
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\bin\Debug\netstandard2.1\TOURISM.App.deps.json
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\bin\Debug\netstandard2.1\TOURISM.App.dll
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\bin\Debug\netstandard2.1\TOURISM.App.pdb
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\bin\Debug\netstandard2.1\TOURISM.App.Infraestructure.dll
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\bin\Debug\netstandard2.1\TOURISM.App.Models.dll
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\bin\Debug\netstandard2.1\TOURISM.App.Infraestructure.pdb
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\bin\Debug\netstandard2.1\TOURISM.App.Models.pdb
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.csproj.AssemblyReference.cache
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\RefitStubs.g.cs
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.AssemblyInfoInputs.cache
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.AssemblyInfo.cs
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.csproj.CoreCompileInputs.cache
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.csproj.CopyComplete
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.dll
-C:\Users\user\Documents\Tourism Ontology\src\TOURISM.App\obj\Debug\netstandard2.1\TOURISM.App.pdb

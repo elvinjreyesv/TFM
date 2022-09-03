@@ -63,10 +63,10 @@ namespace TOURISM.App.Infrastructure.Utils.RefifInterfaces
         }
 
         /// <inheritdoc />
-        Task<List<OntologyDTO>> IApiMethods.GetClassContent(string itemClass, string siteId, string lang, string ipAddress, string token)
+        Task<List<OntologyDTO>> IApiMethods.GetClassContent(string itemClass, string individual, string siteId, string lang, string ipAddress, string token)
         {
-            var arguments = new object[] { itemClass, siteId, lang, ipAddress, token };
-            var func = requestBuilder.BuildRestResultFuncForMethod("GetClassContent", new Type[] { typeof(string), typeof(string), typeof(string), typeof(string), typeof(string) });
+            var arguments = new object[] { itemClass, individual, siteId, lang, ipAddress, token };
+            var func = requestBuilder.BuildRestResultFuncForMethod("GetClassContent", new Type[] { typeof(string), typeof(string), typeof(string), typeof(string), typeof(string), typeof(string) });
             return (Task<List<OntologyDTO>>)func(Client, arguments);
         }
 
@@ -83,6 +83,14 @@ namespace TOURISM.App.Infrastructure.Utils.RefifInterfaces
         {
             var arguments = new object[] { siteId, lang, ipAddress, token };
             var func = requestBuilder.BuildRestResultFuncForMethod("GetFullOntology", new Type[] { typeof(string), typeof(string), typeof(string), typeof(string) });
+            return (Task<List<OntologyDTO>>)func(Client, arguments);
+        }
+
+        /// <inheritdoc />
+        Task<List<OntologyDTO>> IApiMethods.GetRootEntityChildren(string siteId, string lang, string ipAddress, string token)
+        {
+            var arguments = new object[] { siteId, lang, ipAddress, token };
+            var func = requestBuilder.BuildRestResultFuncForMethod("GetRootEntityChildren", new Type[] { typeof(string), typeof(string), typeof(string), typeof(string) });
             return (Task<List<OntologyDTO>>)func(Client, arguments);
         }
     }

@@ -42,7 +42,7 @@ namespace TOURISM.Web.Utils.Services
         public async Task<List<OntologyDTO>> GetClassContent(PublicContentInputDTO dto, string secretKey)
         {
             dto.Token = TokenEncrypter.Encrypt(dto, secretKey);
-            return await Rest.GetClassContent(dto.ItemClass, dto.SiteId, dto.Lang, dto.IpAddressClient, dto.Token);
+            return await Rest.GetClassContent(dto.ItemClass, dto.Individual, dto.SiteId, dto.Lang, dto.IpAddressClient, dto.Token);
         }
         public async Task<List<IndividualPropertiesDTO>> GetIndividualContent(PublicContentInputDTO dto, string secretKey)
         {
@@ -53,6 +53,11 @@ namespace TOURISM.Web.Utils.Services
         {
             dto.Token = TokenEncrypter.Encrypt(dto, secretKey);
             return await Rest.GetFullOntology(dto.SiteId, dto.Lang, dto.IpAddressClient, dto.Token);
+        }
+        public async Task<List<OntologyDTO>> GetRootEntityChildren(PublicContentInputDTO dto, string secretKey)
+        {
+            dto.Token = TokenEncrypter.Encrypt(dto, secretKey);
+            return await Rest.GetRootEntityChildren(dto.SiteId, dto.Lang, dto.IpAddressClient, dto.Token);
         }
         #endregion
     }

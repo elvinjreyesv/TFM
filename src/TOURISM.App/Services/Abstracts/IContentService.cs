@@ -7,8 +7,9 @@ namespace TOURISM.App.Services.Abstracts
     public interface IContentService
     {
         List<OntologyDTO> GetBaseContent();
-        List<OntologyDTO> GetClassContent(string itemClass);
+        List<OntologyDTO> GetClassContent(string itemClass, string individual = "", bool includeProperties = true);
         List<IndividualPropertiesDTO> GetIndividualContent(string individualName, string individualParent);
         List<OntologyDTO> GetFullOntology();
+        List<OntologyDTO> GetRootEntityChildren();
     }
 }

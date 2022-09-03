@@ -9,6 +9,7 @@ namespace TOURISM.App.Models.ViewModels.Public.Content.Outputs
         public string AdditionalText { get; set; }
         public string Image { get; set; }
         public List<BreadCrumbDTO> BreadCrumb { get; set; }
+        public bool ShowSearch { get; set; }
     }
 
     public class BreadCrumbDTO

@@ -31,6 +31,7 @@ namespace TOURISM.App.Models.ViewModels.Public.Content.Outputs
     public class IndividualPropertiesDTO
     {
         public string IndividualName { get; set; }
+        public string ValueList { get; set; }
         public List<PropertyDTO> Properties { get; set; }
     }
 }

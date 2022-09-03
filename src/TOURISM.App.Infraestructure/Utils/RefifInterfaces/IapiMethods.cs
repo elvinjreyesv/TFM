@@ -15,14 +15,17 @@ namespace TOURISM.App.Infrastructure.Utils.RefifInterfaces
         [Get("/api/PageContent?SiteId={siteId}&Lang={lang}&IpAddressClient={ipAddress}&Token={token}")]
         Task<List<OntologyDTO>> GetBaseContent(string siteId, string lang, string ipAddress, string token);
 
-        [Get("/api/PageContent/ClassContent?ItemClass={itemClass}&SiteId={siteId}&Lang={lang}&IpAddressClient={ipAddress}&Token={token}")]
-        Task<List<OntologyDTO>> GetClassContent(string itemClass, string siteId, string lang, string ipAddress, string token);
+        [Get("/api/PageContent/ClassContent?ItemClass={itemClass}&Individual={individual}&SiteId={siteId}&Lang={lang}&IpAddressClient={ipAddress}&Token={token}")]
+        Task<List<OntologyDTO>> GetClassContent(string itemClass, string individual, string siteId, string lang, string ipAddress, string token);
 
         [Get("/api/PageContent/IndividualContent?ItemClass={itemClass}&ParentClass={parentClass}&SiteId={siteId}&Lang={lang}&IpAddressClient={ipAddress}&Token={token}")]
         Task<List<IndividualPropertiesDTO>> GetIndividualContent(string itemClass, string parentClass, string siteId, string lang, string ipAddress, string token);
 
         [Get("/api/PageContent/FullOntology?SiteId={siteId}&Lang={lang}&IpAddressClient={ipAddress}&Token={token}")]
         Task<List<OntologyDTO>> GetFullOntology(string siteId, string lang, string ipAddress, string token);
+
+        [Get("/api/PageContent/RootEntityChildren?SiteId={siteId}&Lang={lang}&IpAddressClient={ipAddress}&Token={token}")]
+        Task<List<OntologyDTO>> GetRootEntityChildren(string siteId, string lang, string ipAddress, string token);
         #endregion
         #endregion
     }

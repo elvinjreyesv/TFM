@@ -121,7 +121,10 @@
   <value>Todos los derechos reservados</value>
 </data>
   <data name="_SearchPlaceholder" xml:space="preserve">
-    <value>Destino, hotel, habitación</value>
+    <value>Destino</value>
+  </data>
+    <data name="_SearchPlaceholder1" xml:space="preserve">
+    <value>Destino, Alojamiento...</value>
   </data>
   <data name="_Discover" xml:space="preserve">
    <value>Descubra</value>

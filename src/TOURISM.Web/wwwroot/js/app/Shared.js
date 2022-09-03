@@ -1,18 +1,47 @@
-﻿//Chosen+Jquery
-$("form").each((index, value) => {
-    let validatorInfo = $(value).data('validator');
-    if (validatorInfo)
-        validatorInfo.settings.ignore = ":hidden:not(.chosen-select)";
-});
-
+﻿
 var TourismApp = TourismApp || {
     Resources: {
         Language: document.cookie.indexOf("CurrentLanguage=ES") !== -1 ? "ES" : "EN",
         Get: new function (key) {
 
-            let LangEs = function (key) {
+            let ResourcesEs = function (key) {
                 var obj = {
                     "_Item_AddHighlighted": "Añadir a elementos destacados",
+                    "_No_Results_For": "Sin resultados para ",
+                    "accommodationsUnder": "Hoteles",
+                    "AccType": "Tipo de Hotel",
+                    "actOfferedBy": "Actividad ofertada por",
+                    "actWithRoom": "Habitaciones del hotel",
+                    "brandAccommodation": "Marca del Hotel",
+                    "hasFacility": "Comodidades",
+                    "roomFacility": "Comodidades de la habitación",
+                    "hasRestaurant": "Restaurantes",
+                    "hasRoom": "Habitaciones",
+                    "isLocated": "Localización",
+                    "offer": "Ofrece",
+                    "offerActivity": "Ofrece las actividades",
+                    "offeredBy": "Ofrecido por",
+                    "underBrand": "Marca",
+                    "amenities": "Comodidades",
+                    "awards": "Reconocimientos",
+                    "brandCode": "Marca",
+                    "code": "Código",
+                    "continent": "Continente",
+                    "country": "País",
+                    "hasStars": "Estrellas",
+                    "maxPrice": "Precio máximo",
+                    "minPrice": "Precio mínimo",
+                    "numberRooms": "Cantidad de habitaciones",
+                    "onlyAdults": "Solo Adultos",
+                    "visitors": "Visitantes",
+                    "AccommodationsByContinents": "Continente",
+                    "MealPlan": "Plan alimenticio",
+                    "HotelRating": "Calificación",
+                    "AccommodationTypes": "Tipo de alojamiento",
+                    "AccommodationGroups": "Grupo del alojamiento",
+                    "GeneralKnowledge": "Información General",
+                    "NaturalAreas": "Tipo",
+                    "Beach": "Tipo"
                 };
 
                 value = key in obj ? obj[key] : '';
@@ -20,16 +49,51 @@ var TourismApp = TourismApp || {
                 return value;
             };
 
-            let LangEn = function (key) {
+            let ResourcesEn = function (key) {
                 var obj = {
                     "_Item_AddHighlighted": "Add to highlighted items",
+                    "_No_Results_For": "No result for ",
+                    "accommodationsUnder": "Accommodations Under",
+                    "AccType": "Accommodation Type",
+                    "actOfferedBy": "Activity Offered By",
+                    "actWithRoom": "Accommodation With Rooms",
+                    "brandAccommodation": "Accommodation Brand",
+                    "hasFacility": "Facilities",
+                    "roomFacility": "Room Facilities",
+                    "hasRestaurant": "Restaurants",
+                    "hasRoom": "Rooms",
+                    "isLocated": "Location",
+                    "offer": "Offer",
+                    "offerActivity": "Offer Activity",
+                    "offeredBy": "Offered By",
+                    "underBrand": "Brand",
+                    "amenities": "Amenities",
+                    "awards": "Awards",
+                    "brandCode": "Brand",
+                    "code": "Code",
+                    "continent": "Continent",
+                    "country": "Country",
+                    "hasStars": "Stars",
+                    "maxPrice": "Max Price",
+                    "minPrice": "Min Price",
+                    "numberRooms": "Rooms Qty",
+                    "onlyAdults": "Only Adults",
+                    "visitors": "Visitors",
+                    "AccommodationsByContinents": "Continent",
+                    "MealPlan": "Meal Plan",
+                    "HotelRating": "Rating",
+                    "AccommodationTypes": "Accommodation Type",
+                    "AccommodationGroups": "Accommodation Group",
+                    "GeneralKnowledge": "General",
+                    "NaturalAreas": "Type",
+                    "Beach": "Type"
+
                 };
 
                 value = key in obj ? obj[key] : '';
 
                 return value;
             };
-
 
             return function (key) {
                 var isSpanish = document.cookie.indexOf("CurrentLanguage=ES") !== -1;
@@ -42,6 +106,19 @@ var TourismApp = TourismApp || {
             };
 
         }
+    },
+    Data: {
+        Url: '',
+        OntologyBaseChildren: null,
+        SearchItems: [],
+        Ontology:null,
+        OntologyPrefixes: [
+            'http://www.semanticweb.org/user/ontologies/2022/0/tourism#',
+            'http://www.w3.org/2002/07/owl#',
+            '^^http://www.w3.org/2001/XMLSchema#int',
+            '^^http://www.w3.org/2001/XMLSchema#double',
+            '^^http://www.w3.org/2001/XMLSchema#boolean',
+        ]
     },
     Constants: {
         BaseUrl: 'https://localhost:44363/'
@@ -75,7 +152,7 @@ var TourismApp = TourismApp || {
             }
         };
 
-        this.Get = function (url, data, successCallback, errorCallback) {
+        this.Get = function (url, data, successCallback, errorCallback, showLoading) {
 
             if (isRequesting) return;
 
@@ -84,7 +161,9 @@ var TourismApp = TourismApp || {
                 url: url,
                 beforeSend: function (request) {
                     isRequesting = true;
-                    TourismApp.Message.Loading();
+
+                    if (showLoading)
+                        TourismApp.Message.Loading();
 
                     if (token)
                         request.setRequestHeader("RequestVerificationToken", token.val());
@@ -97,14 +176,15 @@ var TourismApp = TourismApp || {
             });
         };
 
-        this.Post = function (url, data, successCallback, errorCallback) {
+        this.Post = function (url, data, successCallback, errorCallback, showLoading) {
             if (isRequesting) return;
 
             $.ajax({
                 type: 'POST',
                 url: url,
                 beforeSend: function (request) {
-                    TourismApp.Message.Loading();
+                    if (showLoading)
+                        TourismApp.Message.Loading();
                     isRequesting = true;
                     if (token)
                         request.setRequestHeader("RequestVerificationToken", token.val());
@@ -314,9 +394,172 @@ var TourismApp = TourismApp || {
             return message;
         };
     },
+
+    Helper: new function () {
+        
+        this.ReplaceOntology = function (str) {
+            if (str === '' || str == undefined)
+                return str;
+
+            const output = str.replace(TourismApp.Data.OntologyPrefixes[0], '')
+                .replace(TourismApp.Data.OntologyPrefixes[1], '')
+                .replace(TourismApp.Data.OntologyPrefixes[2], '')
+                .replace(TourismApp.Data.OntologyPrefixes[3], '')
+                .replace(TourismApp.Data.OntologyPrefixes[4], '')
+                .replaceAll('_', ' ')
+                .replace('%E2%80%99', /'/g)
+                .replace('%C3%A1', 'á');
+
+            return output;
+        };
+
+        this.ReplaceBaseOntology = function (str) {
+            if (str === '' || str == undefined)
+                return str;
+
+            const output = str.replace(TourismApp.Data.OntologyPrefixes[0], '')
+                .replace(TourismApp.Data.OntologyPrefixes[1], '')
+                .replace(TourismApp.Data.OntologyPrefixes[2], '')
+                .replace(TourismApp.Data.OntologyPrefixes[3], '')
+                .replace(TourismApp.Data.OntologyPrefixes[4], '');
+
+            return output;
+        };
+
+        this.Filter = function(data, keys) {
+            for (var i in data) {
+                if (keys.indexOf(i) != -1) {
+                    delete data[i];
+                } else if (i === "properties") {
+                    for (var j in data.properties) {
+                        data.properties[j] = filter(data.properties[j])
+                    }
+                }
+                else if (i === "axioms") {
+                    for (var j in data.children) {
+                        data.axioms[j] = filter(data.axioms[j])
+                    }
+                }
+                else if (i === "values") {
+                    for (var j in data.children) {
+                        data.values[j] = filter(data.values[j])
+                    }
+                }
+            }
+            return data;
+        }
+    }
 };
 
 $(document).on('click', '.loading', function () {
     TourismApp.Message.Loading();
 });
 
+function setSearchItems() {
+
+    TourismApp.Ajax.Get(TourismApp.Data.Url, {},
+        function (datos) {
+            if (datos.result.response != null && datos.result.response != null) {
+                TourismApp.Data.SearchItems = datos.result.response;
+                InitializeTypeAhead();
+            }
+        }, function (datos) { }, false);
+}
+
+function InitializeTypeAhead() {
+    $('.js-typeahead-items').typeahead({
+        minLength: 1,
+        maxItem: 15,
+        href: TourismApp.Constants.BaseUrl + "Destinations/DestinationDetail/?type={{parent}}&destination={{class}}&city={{city}}",
+        template: "{{city}} <small style='color:#999;'>{{class}}</small>",
+        order: "asc",
+        offset: true,
+        emptyTemplate: TourismApp.Resources.Get("_No_Results_For")  + '"{{query}}"',
+        display: ["city"],
+        source: {
+            data: TourismApp.Data.SearchItems
+        },
+        callback: {
+            onClickAfter: function (node, a, item, event) {
+                event.preventDefault();
+                window.open(item.href);
+            },
+            onResult: function (node, query, result, resultCount, resultCountPerGroup) {
+                const word = query.replace(/ /g, '');
+
+                if (Number(resultCount) == 0 && word == '') {
+                    $('.typeahead__list .typeahead__item ').remove();
+                }
+            }
+        }
+    });
+    $('.js-typeahead-items').removeAttr('disabled');
+}
+
+function createVueInstance(ontolData) {
+    TourismApp.Data.Ontology = JSON.parse(ontolData);
+    const app = Vue.createApp({
+        data() {
+            return {
+                ontology: JSON.parse(ontolData),
+                filteredOntology: null,
+                search: {
+                    prev: '',
+                    new: ''
+                }
+            }
+        },
+        mounted: function () {
+            this.filteredOntology = this.ontology;
+        },
+        methods: {
+            clickCallback: function (pageNum) {
+                this.pagination.currentPage = Number(pageNum);
+            },
+            replaceOntology: function (str) {
+                return TourismApp.Helper.ReplaceOntology(str);
+            },
+            replaceBaseOntology: function (str) {
+                return TourismApp.Helper.ReplaceBaseOntology(str);
+            },
+            resources: function (str) {
+                return TourismApp.Resources.Get(str);
+            }
+        },
+        computed: {
+            getOntologyItem: function () {
+                const isSearch = this.search.new != '';
+
+                if (this.search.new != this.search.prev) {
+                    if (isSearch) {
+                        const individuals = this.ontology[0].individuals.filter(
+                            (entry) => this.ontology[0].individuals.length
+                                ? ['individualName', 'valueList']
+                                    .some(key => ('' + TourismApp.Helper.ReplaceOntology(entry[key])).toLowerCase().includes(this.search.new.toLowerCase()))
+                                : true
+                        );
+
+                        var ontol = [{
+                            class: this.ontology[0].class,
+                            parent: this.ontology[0].parent,
+                            comment: this.ontology[0].comment,
+                            children: this.ontology[0].children,
+                            individuals: individuals
+                        }];
+
+                        this.filteredOntology = ontol;
+                    }
+                    
+                    this.search.prev = isSearch ? this.search.new : '';
+                }
+                 
+                if (this.search.new == '')
+                    this.filteredOntology = this.ontology;
+
+                return this.filteredOntology;
+            }
+        },
+    }).use("VuejsPaginateNext");
+
+    app.mount("#app");
+}

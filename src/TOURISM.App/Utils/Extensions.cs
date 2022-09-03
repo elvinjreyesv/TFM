@@ -22,7 +22,7 @@ namespace TOURISM.App.Utils
                 Domain = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#AccommodationTypes",
                 Property = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#hasStars",
                 PropertyType = "http://www.w3.org/2002/07/owl#DatatypeProperty",
-                Value = Enumerable.Empty<AxiomValueDTO>().ToList(),
+                Values = Enumerable.Empty<AxiomValueDTO>().ToList(),
                 Range = "http://www.w3.org/2001/XMLSchema#int",
             });
 
@@ -31,7 +31,7 @@ namespace TOURISM.App.Utils
                 Domain = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#AccommodationTypes",
                 Property = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#continent",
                 PropertyType = "http://www.w3.org/2002/07/owl#DatatypeProperty",
-                Value = Enumerable.Empty<AxiomValueDTO>().ToList(),
+                Values = Enumerable.Empty<AxiomValueDTO>().ToList(),
                 Range = "http://www.w3.org/2001/XMLSchema#string",
             });
 
@@ -40,7 +40,7 @@ namespace TOURISM.App.Utils
                 Domain = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#AccommodationTypes",
                 Property = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#awards",
                 PropertyType = "http://www.w3.org/2002/07/owl#DatatypeProperty",
-                Value = Enumerable.Empty<AxiomValueDTO>().ToList(),
+                Values = Enumerable.Empty<AxiomValueDTO>().ToList(),
                 Range = "award",
             });
 
@@ -49,7 +49,7 @@ namespace TOURISM.App.Utils
                 Domain = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#AccommodationTypes",
                 Property = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#offerActivity",
                 PropertyType = "http://www.w3.org/2002/07/owl#ObjectProperty",
-                Value = Enumerable.Empty<AxiomValueDTO>().ToList(),
+                Values = Enumerable.Empty<AxiomValueDTO>().ToList(),
                 Range = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#Activities",
             });
 
@@ -58,7 +58,7 @@ namespace TOURISM.App.Utils
                 Domain = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#AccommodationTypes",
                 Property = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#hasFacility",
                 PropertyType = "http://www.w3.org/2002/07/owl#ObjectProperty",
-                Value = Enumerable.Empty<AxiomValueDTO>().ToList(),
+                Values = Enumerable.Empty<AxiomValueDTO>().ToList(),
                 Range = "http://www.semanticweb.org/user/ontologies/2022/0/tourism#Facilities",
             });
 

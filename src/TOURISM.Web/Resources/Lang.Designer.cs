@@ -286,7 +286,7 @@ namespace TOURISM.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Individuals Relates.
+        ///   Looks up a localized string similar to Individuals Related.
         /// </summary>
         public static string _IndividualsRelated {
             get {
@@ -403,11 +403,20 @@ namespace TOURISM.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Destination, accomodation, room.
+        ///   Looks up a localized string similar to Destination.
         /// </summary>
         public static string _SearchPlaceholder {
             get {
                 return ResourceManager.GetString("_SearchPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destination, Accommodation....
+        /// </summary>
+        public static string _SearchPlaceholder1 {
+            get {
+                return ResourceManager.GetString("_SearchPlaceholder1", resourceCulture);
             }
         }
         
