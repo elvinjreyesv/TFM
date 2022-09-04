@@ -64,10 +64,10 @@
                             }
 
                             <div v-show="ind.properties !=null">
-                                <div v-if="ind.properties.filter(row => row.axioms !== null) != null">
+                                <div v-if="ind.properties.filter(row => row.axioms !== null &&  row.axioms.length >0).length >0">
                                     <div class="d-block agent-box p-2 mt-2">
                                         <div v-for="prop in ind.properties.filter(row => row.axioms !== null)">
-                                            <div v-if="prop.axioms.length > 0" v-for="atr in prop.axioms">
+                                            <div v-for="atr in prop.axioms">
                                                 <div class="text">
                                                     <h3>
                                                         @Lang("_Axiom"): <span style='font-size:0.8rem; color:#000;'><span class='text-muted small' property='v:axiom'>{{replaceOntology(atr.domain)}} - {{replaceOntology(atr.property)}} - {{replaceOntology(atr.range)}} [{{replaceOntology(atr.propertyType)}}]</span></span>
@@ -87,16 +87,16 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div v-else>
-                                                <div class="text"><h3>@Lang("_InferredAttributes")</h3></div>
-                                                <ul class="dark-hover d-flex" style="display:block !important;">
-                                                    <li v-for="prop in ind.properties">
-                                                        <span class="fw-bold" property="'v:'+prop.parent">{{resources(prop.parent)}}: </span> {{prop.class}}
-                                                    </li>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                 <div v-else>
+                                    <div class="text"><h3>@Lang("_InferredAttributes")</h3></div>
+                                    <ul class="dark-hover d-flex" style="display:block !important;">
+                                        <li v-for="prop in ind.properties">
+                                            <span class="fw-bold" property="'v:'+prop.parent">{{resources(replaceBaseOntology(prop.parent))}}: </span> {{replaceBaseOntology(prop.class)}}
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

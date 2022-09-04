@@ -41,7 +41,8 @@ var TourismApp = TourismApp || {
                     "AccommodationGroups": "Grupo del alojamiento",
                     "GeneralKnowledge": "Información General",
                     "NaturalAreas": "Tipo",
-                    "Beach": "Tipo"
+                    "Beach": "Tipo",
+                    "Destination": "Destino"
                 };
 
                 value = key in obj ? obj[key] : '';
@@ -86,7 +87,8 @@ var TourismApp = TourismApp || {
                     "AccommodationGroups": "Accommodation Group",
                     "GeneralKnowledge": "General",
                     "NaturalAreas": "Type",
-                    "Beach": "Type"
+                    "Beach": "Type",
+                    "Destination": "Destination"
 
                 };
 
